@@ -1,0 +1,1413 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>TechiGuru | Master Modern Technology. Build Real-World Skills.</title>
+<!-- Primary Meta Tags -->
+<meta content="TechiGuru | Master Modern Technology. Build Real-World Skills." name="title"/>
+<meta content="Welcome to TechiGuru, your ultimate destination for mastering modern technology and building real-world skills through practical, project-based learning experiences." name="description"/>
+<meta content="TechiGuru, coding tutorials, programming, web development, MERN stack, Python, DSA, Cloud computing, YouTube creator, tech education" name="keywords"/>
+<meta content="TechiGuru" name="author"/>
+<meta content="#0a0f1d" name="theme-color"/>
+<!-- Open Graph / Facebook -->
+<meta content="website" property="og:type"/>
+<meta content="https://techiguru.in/" property="og:url"/>
+<meta content="TechiGuru | Master Modern Technology. Build Real-World Skills." property="og:title"/>
+<meta content="Simplify complex tech concepts and transform them into practical, project-based learning experiences." property="og:description"/>
+<meta content="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=1200&amp;auto=format&amp;fit=crop&amp;q=80" property="og:image"/>
+<!-- Twitter -->
+<meta content="summary_large_image" property="twitter:card"/>
+<meta content="https://techiguru.in/" property="twitter:url"/>
+<meta content="TechiGuru | Master Modern Technology. Build Real-World Skills." property="twitter:title"/>
+<meta content="Simplify complex tech concepts and transform them into practical, project-based learning experiences." property="twitter:description"/>
+<!-- Tailwind CSS & Google Fonts -->
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          },
+          colors: {
+            brand: {
+              50: '#eef7ff',
+              100: '#d9edff',
+              400: '#38bdf8',
+              500: '#0284c7',
+              600: '#0369a1',
+              accent: '#2563eb',
+              glow: '#38bdf8',
+            },
+            dark: {
+              950: '#060911',
+              900: '#0a0f1d',
+              850: '#0e1526',
+              800: '#141e34',
+              700: '#1e293b',
+              600: '#334155',
+            }
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #0a0f1d;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #1e293b;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #38bdf8;
+    }
+    .tech-glow {
+      box-shadow: 0 0 30px -10px rgba(56, 189, 248, 0.25);
+    }
+    .modal-backdrop {
+      backdrop-filter: blur(8px);
+    }
+  </style>
+</head>
+<body class="bg-[#060911] text-slate-100 font-sans antialiased selection:bg-brand-500 selection:text-white overflow-x-hidden">
+<!-- Navigation Bar -->
+<header class="fixed top-0 left-0 right-0 z-50 bg-[#0a0f1d]/90 backdrop-blur-md border-b border-slate-800/80 transition-all duration-300" id="navbar">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex items-center justify-between h-20">
+<!-- Logo -->
+<a class="flex items-center gap-3 group" href="#home">
+<div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-600 to-brand-400 flex items-center justify-center text-white font-bold font-mono text-xl shadow-lg shadow-brand-500/20 group-hover:scale-105 transition-transform">
+            TG
+          </div>
+<div>
+<div class="flex items-center gap-1.5">
+<span class="text-xl font-extrabold tracking-tight text-white group-hover:text-brand-400 transition-colors">TechiGuru</span>
+<span class="inline-block w-2 h-2 rounded-full bg-emerald-400 animate-pulse" title="Channel Active"></span>
+</div>
+<span class="text-[10px] text-slate-400 font-mono tracking-wider uppercase block">techiguru.in</span>
+</div>
+</a>
+<!-- Desktop Navigation Links -->
+<nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
+<a class="hover:text-brand-400 transition-colors" href="#home">Home</a>
+<a class="hover:text-brand-400 transition-colors" href="#videos">YouTube Videos</a>
+<a class="hover:text-brand-400 transition-colors" href="#about">About &amp; Curriculum</a>
+<a class="hover:text-brand-400 transition-colors" href="#blog">Blog</a>
+<a class="hover:text-brand-400 transition-colors" href="#collaborate">Work With Us</a>
+<a class="hover:text-brand-400 transition-colors" href="#contact">Contact</a>
+</nav>
+<!-- CTA & Subscribe -->
+<div class="hidden sm:flex items-center gap-4">
+<a class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-red-600 hover:bg-red-700 text-white text-sm font-semibold shadow-md shadow-red-600/20 hover:shadow-red-600/40 transition-all transform hover:-translate-y-0.5" href="https://www.youtube.com/@techiguru-in?sub_confirmation=1" rel="noopener noreferrer" target="_blank">
+<svg class="w-4 h-4 fill-current" viewbox="0 0 24 24">
+<path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.498-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"></path>
+</svg>
+<span>Subscribe</span>
+</a>
+</div>
+<!-- Mobile Menu Hamburger Button -->
+<button aria-label="Toggle Navigation Menu" class="md:hidden p-2 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-brand-400 w-10 h-10" id="mobileMenuBtn">
+<svg class="w-6 h-6" fill="none" id="menuIconClosed" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+<svg class="w-6 h-6 hidden" fill="none" id="menuIconOpened" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+</div>
+</div>
+<!-- Mobile Drawer Menu -->
+<div class="hidden md:hidden bg-[#0a0f1d] border-b border-slate-800 px-6 py-5 space-y-4 shadow-2xl" id="mobileMenu">
+<div class="flex flex-col space-y-3 text-base font-medium text-slate-300">
+<a class="mobile-nav-link py-2 hover:text-brand-400" href="#home">Home</a>
+<a class="mobile-nav-link py-2 hover:text-brand-400" href="#videos">YouTube Videos</a>
+<a class="mobile-nav-link py-2 hover:text-brand-400" href="#about">About &amp; Curriculum</a>
+<a class="mobile-nav-link py-2 hover:text-brand-400" href="#blog">Blog</a>
+<a class="mobile-nav-link py-2 hover:text-brand-400" href="#collaborate">Work With Us</a>
+<a class="mobile-nav-link py-2 hover:text-brand-400" href="#contact">Contact</a>
+</div>
+<div class="pt-4 border-t border-slate-800 flex flex-col gap-3">
+<a class="w-full flex items-center justify-center gap-2 py-3 rounded-lg bg-red-600 text-white font-semibold shadow-md" href="https://www.youtube.com/@techiguru-in?sub_confirmation=1" rel="noopener noreferrer" target="_blank">
+<svg class="w-4 h-4 fill-current" viewbox="0 0 24 24">
+<path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.498-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"></path>
+</svg>
+          Subscribe on YouTube
+        </a>
+</div>
+</div>
+</header>
+<!-- Hero Section -->
+<section class="relative pt-32 pb-20 md:pt-44 md:pb-32 overflow-hidden border-b border-slate-800/80" id="home">
+<!-- Subtle Background Lighting Accent -->
+<div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[650px] h-[350px] bg-brand-500/10 rounded-full blur-[120px] pointer-events-none"></div>
+<div class="absolute top-1/3 right-10 w-[300px] h-[300px] bg-blue-600/10 rounded-full blur-[90px] pointer-events-none"></div>
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+<!-- Left: Hero Copy -->
+<div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+<div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-brand-500/10 border border-brand-500/20 text-brand-400 text-xs font-mono font-medium">
+<span class="w-2 h-2 rounded-full bg-brand-400 animate-ping"></span>
+            Official Channel Hub • India
+          </div>
+<h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-tight">
+            Learn Technology. <br class="hidden sm:inline"/>
+<span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-400 via-sky-300 to-blue-500">
+              Build Projects.
+            </span> <br/>
+            Grow Your Skills.
+          </h1>
+<p class="text-lg sm:text-xl text-slate-300 max-w-2xl mx-auto lg:mx-0 font-normal leading-relaxed">
+            Welcome to <strong class="text-white font-semibold">TechiGuru</strong>, your ultimate destination for mastering modern technology and building real-world skills that matter.
+          </p>
+<p class="text-sm sm:text-base text-slate-400 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+            At TechiGuru, we simplify complex tech concepts and transform them into practical, project-based learning experiences. Whether you're a beginner starting your coding journey or a professional upgrading your skills, this channel is designed to help you grow.
+          </p>
+<!-- Action Buttons -->
+<div class="pt-4 flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4 justify-center lg:justify-start w-full">
+<a class="px-6 py-3.5 rounded-xl bg-brand-600 hover:bg-brand-500 text-white font-semibold text-sm transition-all shadow-lg shadow-brand-600/25 flex items-center gap-2 transform hover:-translate-y-0.5" href="#videos">
+<svg class="w-4 h-4 fill-current" viewbox="0 0 24 24">
+<path d="M8 5v14l11-7z"></path>
+</svg>
+              Watch Videos
+            </a>
+<a class="px-6 py-3.5 rounded-xl bg-dark-800 hover:bg-dark-700 text-slate-200 border border-slate-700/80 font-semibold text-sm transition-all flex items-center gap-2 transform hover:-translate-y-0.5" href="#about">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+              Explore Tutorials
+            </a>
+<a class="px-6 py-3.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-brand-400 border border-brand-500/30 font-semibold text-sm transition-all flex items-center gap-2 transform hover:-translate-y-0.5" href="#collaborate">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+              Collaborate With Us
+            </a>
+</div>
+<!-- Channel Highlights Stats (Transparently Grounded) -->
+<div class="pt-6 grid grid-cols-3 gap-4 border-t border-slate-800/80 max-w-lg mx-auto lg:mx-0">
+<div>
+<div class="text-xl sm:text-2xl font-bold font-mono text-white">Full-Stack</div>
+<div class="text-xs text-slate-400">Industry Projects</div>
+</div>
+<div>
+<div class="text-xl sm:text-2xl font-bold font-mono text-brand-400">100% Free</div>
+<div class="text-xs text-slate-400">High-Def Tutorials</div>
+</div>
+<div>
+<div class="text-xl sm:text-2xl font-bold font-mono text-white">Hindi &amp; Eng</div>
+<div class="text-xs text-slate-400">Clear Explanations</div>
+</div>
+</div>
+</div>
+<!-- Right: Interactive Featured Showcase Card -->
+<div class="lg:col-span-5">
+<div class="relative rounded-2xl bg-gradient-to-b from-dark-800 to-dark-850 border border-slate-700/80 p-5 shadow-2xl tech-glow">
+<!-- Video Thumbnail Header / Quick Play -->
+<div class="relative aspect-video rounded-xl overflow-hidden bg-slate-900 group cursor-pointer" onclick="openVideoModal('dQw4w9WgXcQ', 'TechiGuru Channel Trailer &amp; Coding Roadmap')">
+<img alt="Modern coding setup and full stack roadmap" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-80" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAK9XV7xnWi0SBq6YhJL1MIJx1oQMLtU9hKvhz6MfRBrYUh7hkRK7J8R_jOvIBmOvAZ-FgG7R6Y9fbFWttuMGV0ZwhiAeGNQSlNVc3BtmGb7a6EQGlk0LXO8nBbiTsLJiG4fSWV7Mheslv1dxllRpU_XBNd5HrHwv__i1Rgo92HFzQPgvKSC4u_JV38oHCM1Scf7dUv7_Gn2Rx_aVgWaSnd5IfjM7qnOvigiJ2YUy47mqUOVob05kmD"/>
+<div class="absolute inset-0 bg-gradient-to-t from-dark-950 via-dark-950/40 to-transparent flex items-center justify-center">
+<div class="w-16 h-16 rounded-full bg-red-600/90 text-white flex items-center justify-center shadow-lg group-hover:scale-110 group-hover:bg-red-600 transition-all">
+<svg class="w-7 h-7 fill-current ml-1" viewbox="0 0 24 24">
+<path d="M8 5v14l11-7z"></path>
+</svg>
+</div>
+</div>
+<div class="absolute bottom-3 left-3 right-3 flex items-center justify-between text-xs font-mono">
+<span class="px-2 py-0.5 rounded bg-black/80 text-white font-medium">Channel Intro &amp; Roadmap</span>
+<span class="px-2 py-0.5 rounded bg-brand-500/80 text-white font-medium">Watch Trailer</span>
+</div>
+</div>
+<!-- Card Content Body -->
+<div class="mt-5 space-y-3">
+<div class="flex items-center justify-between">
+<span class="text-xs font-mono text-brand-400 uppercase tracking-wider">Featured Series</span>
+<span class="text-xs text-slate-400 font-mono">techiguru-in</span>
+</div>
+<h3 class="text-lg font-bold text-white leading-snug">
+                Building Modern Real-World Software: From Logic to Cloud Deployment
+              </h3>
+<p class="text-xs text-slate-400 leading-relaxed">
+                Step-by-step guides breaking down Full-Stack Development, DSA algorithms, and Cloud infrastructure into digestible, actionable sessions.
+              </p>
+<div class="pt-2 flex items-center justify-between border-t border-slate-800 text-xs">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+<span class="text-slate-300">New uploads weekly</span>
+</div>
+<a class="text-brand-400 hover:text-brand-300 font-medium inline-flex items-center gap-1" href="https://www.youtube.com/@techiguru-in" rel="noopener noreferrer" target="_blank">
+                  Visit Channel
+                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M14 5l7 7m0 0l-7 7m7-7H3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Popular Topics Bar -->
+<section class="py-10 bg-dark-900 border-b border-slate-800">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-6">
+<div>
+<h2 class="text-xs font-mono uppercase tracking-widest text-slate-400">Curated Learning Tracks</h2>
+<p class="text-base font-semibold text-white mt-1">What you will learn on TechiGuru</p>
+</div>
+<div class="flex flex-wrap sm:flex-nowrap overflow-x-auto gap-2 sm:gap-3 pb-1 sm:pb-0">
+<span class="px-3 py-1.5 rounded-lg bg-dark-800 border border-slate-700 text-xs font-mono text-slate-300">#Python</span>
+<span class="px-3 py-1.5 rounded-lg bg-dark-800 border border-slate-700 text-xs font-mono text-slate-300">#JavaScript</span>
+<span class="px-3 py-1.5 rounded-lg bg-dark-800 border border-slate-700 text-xs font-mono text-slate-300">#MERN-Stack</span>
+<span class="px-3 py-1.5 rounded-lg bg-dark-800 border border-slate-700 text-xs font-mono text-slate-300">#Java &amp; C++</span>
+<span class="px-3 py-1.5 rounded-lg bg-dark-800 border border-slate-700 text-xs font-mono text-slate-300">#Docker &amp; AWS</span>
+<span class="px-3 py-1.5 rounded-lg bg-dark-800 border border-slate-700 text-xs font-mono text-slate-300">#DSA &amp; DB</span>
+<span class="px-3 py-1.5 rounded-lg bg-dark-800 border border-slate-700 text-xs font-mono text-slate-300">#AI &amp; Data</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Section: YouTube Videos -->
+<section class="py-24 bg-[#060911] border-b border-slate-800 relative" id="videos">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<!-- Section Header -->
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+<div>
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-red-600/10 border border-red-600/20 text-red-400 text-xs font-mono font-medium mb-3">
+<svg class="w-3.5 h-3.5 fill-current" viewbox="0 0 24 24">
+<path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.498-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"></path>
+</svg>
+            YouTube Video Repository
+          </div>
+<h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
+            Latest Tutorials &amp; Tech Walkthroughs
+          </h2>
+<p class="text-slate-400 mt-2 max-w-xl text-sm sm:text-base">
+            Watch hands-on coding exercises, project builds, and deep architecture dives directly from the TechiGuru catalog.
+          </p>
+</div>
+<!-- External Subscribe Button -->
+<div class="flex items-center gap-3">
+<a class="px-4 py-2.5 rounded-lg bg-dark-800 hover:bg-dark-700 text-slate-300 border border-slate-700 text-xs font-semibold flex items-center gap-2 transition-all" href="https://www.youtube.com/@techiguru-in" rel="noopener noreferrer" target="_blank">
+            Open in YouTube
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</a>
+</div>
+</div>
+<!-- Live Search, Category Filters, & Sorting Bar -->
+<div class="bg-dark-900 border border-slate-800 p-4 sm:p-5 rounded-2xl mb-8 space-y-4">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-4">
+<!-- Search Input -->
+<div class="md:col-span-5 relative">
+<span class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-400">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</span>
+<input class="w-full pl-10 pr-4 py-3 bg-dark-800 border border-slate-700 rounded-xl text-base sm:text-sm text-white placeholder-slate-400 focus:outline-none focus:border-brand-400 focus:ring-1 focus:ring-brand-400 transition-colors" id="videoSearchInput" placeholder="Search tutorials (e.g. MERN, Python, Docker)..." type="text"/>
+</div>
+<!-- Category Selector -->
+<div class="md:col-span-4">
+<select class="w-full px-4 py-3 bg-dark-800 border border-slate-700 rounded-xl text-base sm:text-sm text-slate-200 focus:outline-none focus:border-brand-400 focus:ring-1 focus:ring-brand-400 transition-colors" id="videoCategorySelect">
+<option value="ALL">All Categories</option>
+<option value="Web Development">Web Development (MERN/Full-Stack)</option>
+<option value="Programming">Programming (Python, C++, Java)</option>
+<option value="Cloud &amp; DevOps">Cloud &amp; DevOps (Docker, AWS)</option>
+<option value="Core CS">Core CS &amp; Algorithms (DSA)</option>
+<option value="AI &amp; Data">AI, Machine Learning &amp; Data</option>
+</select>
+</div>
+<!-- Sort Order -->
+<div class="md:col-span-3">
+<select class="w-full px-4 py-3 bg-dark-800 border border-slate-700 rounded-xl text-base sm:text-sm text-slate-200 focus:outline-none focus:border-brand-400 focus:ring-1 focus:ring-brand-400 transition-colors" id="videoSortSelect">
+<option value="NEWEST">Sort: Newest First</option>
+<option value="OLDEST">Sort: Oldest First</option>
+<option value="TITLE">Sort: Title (A-Z)</option>
+</select>
+</div>
+</div>
+<!-- Technical Integration Indicator Box -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between text-xs text-slate-400 border-t border-slate-800/80 pt-3 gap-2">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-brand-400"></span>
+<span>Data Source: <strong class="text-slate-300 font-mono">Curated Static Feed</strong> (Zero API key dependency required)</span>
+</div>
+<button class="text-brand-400 hover:text-brand-300 underline font-mono text-[11px] self-start sm:self-auto" id="apiGuideToggleBtn">
+            Configure Live YouTube Data API v3 Key →
+          </button>
+</div>
+<!-- Collapsible YouTube API Integration Guide -->
+<div class="hidden mt-3 p-4 rounded-xl bg-dark-950 border border-slate-700/80 text-xs text-slate-300 space-y-3 font-mono" id="apiGuideBox">
+<div class="flex items-center justify-between font-bold text-brand-400">
+<span>// YouTube Data API v3 Client Instructions</span>
+<span class="text-slate-500 font-normal">Security Notice</span>
+</div>
+<p class="text-slate-400 leading-relaxed font-sans">
+            To fetch real-time channel uploads dynamically, enable the <strong class="text-white">YouTube Data API v3</strong> in the Google Cloud Console, generate an API key restricted to your domain (<code class="text-brand-300">techiguru.in</code>), and set your channel ID.
+          </p>
+<div class="p-3 bg-dark-900 rounded-lg text-slate-300 overflow-x-auto text-[11px]">
+<code>GET https://www.googleapis.com/youtube/v3/search?key=YOUR_API_KEY&amp;channelId=UC_YOUR_CHANNEL_ID∂=snippet,idℴ=date&amp;maxResults=12</code>
+</div>
+<p class="text-slate-400 font-sans text-[11px]">
+<em>Best Practice:</em> For production sites, use a serverless function (e.g. Netlify/Vercel serverless or Cloudflare Worker) to keep the API key confidential and cache results to prevent hitting Google API quotas.
+          </p>
+</div>
+</div>
+<!-- Videos Grid Container -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" id="videoGrid">
+<!-- Rendered dynamically by JavaScript -->
+</div>
+<!-- Empty / Not Found State -->
+<div class="hidden py-16 text-center bg-dark-900 rounded-2xl border border-slate-800" id="videoEmptyState">
+<svg class="w-12 h-12 text-slate-500 mx-auto mb-3" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+<h4 class="text-lg font-bold text-white">No matching tutorials found</h4>
+<p class="text-slate-400 text-sm mt-1 max-w-sm mx-auto">Try searching with a different keyword or resetting your category filter.</p>
+<button class="mt-4 px-4 py-2 bg-brand-600 hover:bg-brand-500 text-white text-xs font-semibold rounded-lg transition-colors" id="resetVideoFilterBtn">
+          Reset Filters
+        </button>
+</div>
+<!-- Pagination / Load More Button -->
+<div class="mt-12 text-center" id="loadMoreSection">
+<button class="px-8 py-3.5 rounded-xl bg-dark-800 hover:bg-dark-700 text-white border border-slate-700 font-semibold text-sm transition-all shadow-md inline-flex items-center gap-2" id="loadMoreBtn">
+<span>Load More Videos</span>
+<svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+</div>
+</div>
+</section>
+<!-- Section: About TechiGuru & Learning Tracks -->
+<section class="py-24 bg-dark-900 border-b border-slate-800" id="about">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<!-- Mission statement banner -->
+<div class="max-w-4xl mx-auto text-center space-y-4 mb-20">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-500/10 border border-brand-500/20 text-brand-400 text-xs font-mono font-medium">
+          Channel Mission
+        </div>
+<h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
+          About TechiGuru
+        </h2>
+<div class="p-8 rounded-2xl bg-dark-850 border border-slate-700/80 shadow-xl relative overflow-hidden">
+<div class="absolute -right-6 -bottom-6 text-slate-800/40 pointer-events-none">
+<svg class="w-36 h-36 fill-current" viewbox="0 0 24 24">
+<path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"></path>
+</svg>
+</div>
+<p class="text-xl sm:text-2xl font-medium text-slate-100 leading-relaxed relative z-10 italic">
+            “To bridge the gap between learning and real-world industry skills through practical tutorials, hands-on projects and modern technology education.”
+          </p>
+<div class="mt-4 text-xs font-mono text-brand-400 uppercase tracking-widest relative z-10">
+            — TechiGuru Core Philosophy
+          </div>
+</div>
+</div>
+<!-- 6 Core Subject Tracks -->
+<div>
+<div class="text-center mb-12">
+<h3 class="text-2xl font-bold text-white">Comprehensive Technology Curriculum</h3>
+<p class="text-slate-400 text-sm mt-1">Structured modules covered systematically across our video tutorials</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- Track 1: Programming Languages -->
+<div class="p-6 rounded-2xl bg-dark-800 border border-slate-700/80 hover:border-brand-500/50 transition-all hover:-translate-y-1 group">
+<div class="w-12 h-12 rounded-xl bg-brand-500/10 text-brand-400 flex items-center justify-center font-mono font-bold text-lg mb-4 group-hover:bg-brand-500 group-hover:text-white transition-colors">
+              01
+            </div>
+<h4 class="text-lg font-bold text-white mb-2">Programming Languages</h4>
+<p class="text-xs text-slate-300 leading-relaxed mb-4">
+              Master the foundational and modern languages essential for software engineering.
+            </p>
+<div class="flex flex-wrap gap-1.5 font-mono text-[11px]">
+<span class="px-2.5 py-1 rounded bg-dark-900 text-brand-300 border border-slate-700">Python</span>
+<span class="px-2.5 py-1 rounded bg-dark-900 text-brand-300 border border-slate-700">JavaScript</span>
+<span class="px-2.5 py-1 rounded bg-dark-900 text-brand-300 border border-slate-700">Java</span>
+<span class="px-2.5 py-1 rounded bg-dark-900 text-brand-300 border border-slate-700">C / C++</span>
+<span class="px-2.5 py-1 rounded bg-dark-900 text-brand-300 border border-slate-700">.NET</span>
+</div>
+</div>
+<!-- Track 2: Web Development -->
+<div class="p-6 rounded-2xl bg-dark-800 border border-slate-700/80 hover:border-brand-500/50 transition-all hover:-translate-y-1 group">
+<div class="w-12 h-12 rounded-xl bg-brand-500/10 text-brand-400 flex items-center justify-center font-mono font-bold text-lg mb-4 group-hover:bg-brand-500 group-hover:text-white transition-colors">
+              02
+            </div>
+<h4 class="text-lg font-bold text-white mb-2">Web Development</h4>
+<p class="text-xs text-slate-300 leading-relaxed mb-4">
+              Modern frontend and backend engineering to architect scalable production web applications.
+            </p>
+<div class="flex flex-wrap gap-1.5 font-mono text-[11px]">
+<span class="px-2.5 py-1 rounded bg-dark-900 text-brand-300 border border-slate-700">MERN Stack</span>
+<span class="px-2.5 py-1 rounded bg-dark-900 text-brand-300 border border-slate-700">React &amp; Next.js</span>
+<span class="px-2.5 py-1 rounded bg-dark-900 text-brand-300 border border-slate-700">Node &amp; Express</span>
+<span class="px-2.5 py-1 rounded bg-dark-900 text-brand-300 border border-slate-700">Full-Stack Arch</span>
+</div>
+</div>
+<!-- Track 3: Mobile App Development -->
+<div class="p-6 rounded-2xl bg-dark-800 border border-slate-700/80 hover:border-brand-500/50 transition-all hover:-translate-y-1 group">
+<div class="w-12 h-12 rounded-xl bg-brand-500/10 text-brand-400 flex items-center justify-center font-mono font-bold text-lg mb-4 group-hover:bg-brand-500 group-hover:text-white transition-colors">
+              03
+            </div>
+<h4 class="text-lg font-bold text-white mb-2">Mobile App Development</h4>
+<p class="text-xs text-slate-300 leading-relaxed mb-4">
+              Ship performant applications for Android and iOS using modern frameworks and native APIs.
+            </p>
+<div class="flex flex-wrap gap-1.5 font-mono text-[11px]">
+<span class="px-2.5 py-1 rounded bg-dark-900 text-brand-300 border border-slate-700">Cross-Platform</span>
+<span class="px-2.5 py-1 rounded bg-dark-900 text-brand-300 border border-slate-700">Flutter / React Native</span>
+<span class="px-2.5 py-1 rounded bg-dark-900 text-brand-300 border border-slate-700">Native Android</span>
+</div>
+</div>
+<!-- Track 4: Cloud and DevOps -->
+<div class="p-6 rounded-2xl bg-dark-800 border border-slate-700/80 hover:border-brand-500/50 transition-all hover:-translate-y-1 group">
+<div class="w-12 h-12 rounded-xl bg-brand-500/10 text-brand-400 flex items-center justify-center font-mono font-bold text-lg mb-4 group-hover:bg-brand-500 group-hover:text-white transition-colors">
+              04
+            </div>
+<h4 class="text-lg font-bold text-white mb-2">Cloud &amp; DevOps</h4>
+<p class="text-xs text-slate-300 leading-relaxed mb-4">
+              Containerization, continuous integration, continuous delivery, and infrastructure automation.
+            </p>
+<div class="flex flex-wrap gap-1.5 font-mono text-[11px]">
+<span class="px-2.5 py-1 rounded bg-dark-900 text-brand-300 border border-slate-700">AWS Services</span>
+<span class="px-2.5 py-1 rounded bg-dark-900 text-brand-300 border border-slate-700">Docker Containers</span>
+<span class="px-2.5 py-1 rounded bg-dark-900 text-brand-300 border border-slate-700">CI/CD Pipelines</span>
+<span class="px-2.5 py-1 rounded bg-dark-900 text-brand-300 border border-slate-700">Linux Deployments</span>
+</div>
+</div>
+<!-- Track 5: Data and AI -->
+<div class="p-6 rounded-2xl bg-dark-800 border border-slate-700/80 hover:border-brand-500/50 transition-all hover:-translate-y-1 group">
+<div class="w-12 h-12 rounded-xl bg-brand-500/10 text-brand-400 flex items-center justify-center font-mono font-bold text-lg mb-4 group-hover:bg-brand-500 group-hover:text-white transition-colors">
+              05
+            </div>
+<h4 class="text-lg font-bold text-white mb-2">Data &amp; AI</h4>
+<p class="text-xs text-slate-300 leading-relaxed mb-4">
+              Data pipelines, statistical modeling, machine learning algorithms, and real AI integration.
+            </p>
+<div class="flex flex-wrap gap-1.5 font-mono text-[11px]">
+<span class="px-2.5 py-1 rounded bg-dark-900 text-brand-300 border border-slate-700">Data Science</span>
+<span class="px-2.5 py-1 rounded bg-dark-900 text-brand-300 border border-slate-700">Machine Learning</span>
+<span class="px-2.5 py-1 rounded bg-dark-900 text-brand-300 border border-slate-700">Artificial Intelligence</span>
+<span class="px-2.5 py-1 rounded bg-dark-900 text-brand-300 border border-slate-700">Pandas / NumPy</span>
+</div>
+</div>
+<!-- Track 6: Core Computer Science -->
+<div class="p-6 rounded-2xl bg-dark-800 border border-slate-700/80 hover:border-brand-500/50 transition-all hover:-translate-y-1 group">
+<div class="w-12 h-12 rounded-xl bg-brand-500/10 text-brand-400 flex items-center justify-center font-mono font-bold text-lg mb-4 group-hover:bg-brand-500 group-hover:text-white transition-colors">
+              06
+            </div>
+<h4 class="text-lg font-bold text-white mb-2">Core Computer Science</h4>
+<p class="text-xs text-slate-300 leading-relaxed mb-4">
+              The fundamental pillars necessary to crack coding interviews and design optimal software.
+            </p>
+<div class="flex flex-wrap gap-1.5 font-mono text-[11px]">
+<span class="px-2.5 py-1 rounded bg-dark-900 text-brand-300 border border-slate-700">Data Structures (DSA)</span>
+<span class="px-2.5 py-1 rounded bg-dark-900 text-brand-300 border border-slate-700">Algorithms</span>
+<span class="px-2.5 py-1 rounded bg-dark-900 text-brand-300 border border-slate-700">Database Systems (SQL &amp; NoSQL)</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section: Technology Blog -->
+<section class="py-24 bg-[#060911] border-b border-slate-800" id="blog">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<!-- Section Header -->
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+<div>
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-500/10 border border-brand-500/20 text-brand-400 text-xs font-mono font-medium mb-3">
+            Written Publications &amp; Notes
+          </div>
+<h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
+            TechiGuru Engineering Blog
+          </h2>
+<p class="text-slate-400 mt-2 max-w-xl text-sm sm:text-base">
+            Original articles, architectural breakdowns, and cheat-sheets to supplement your video learning.
+          </p>
+</div>
+<!-- CMS Architecture Notice -->
+<div class="text-right">
+<span class="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-dark-800 border border-slate-700 text-xs font-mono text-slate-400">
+<span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+            Static Markdown &amp; Source Architecture
+          </span>
+</div>
+</div>
+<!-- Blog Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="blogGrid">
+<!-- Rendered by JavaScript -->
+</div>
+<!-- Blog Maintenance Explanation -->
+<div class="mt-12 p-5 rounded-2xl bg-dark-900 border border-slate-800 text-xs text-slate-400 flex flex-col md:flex-row md:items-center justify-between gap-4 font-mono">
+<div>
+<span class="text-brand-400 font-bold block mb-1">// Content Management System Note:</span>
+          To add or edit blog posts, simply update the <code class="text-slate-200 bg-dark-950 px-1 py-0.5 rounded">BLOG_POSTS</code> array in this file, or hook into a headless CMS like Contentful, Sanity, or GitHub Markdown via fetch.
+        </div>
+<a class="px-4 py-2 rounded-lg bg-dark-800 hover:bg-dark-700 text-brand-400 border border-slate-700 self-start md:self-auto shrink-0 transition-colors" href="#collaborate">
+          Submit Guest Post →
+        </a>
+</div>
+</div>
+</section>
+<!-- Section: Collaboration & Business Inquiries -->
+<section class="py-24 bg-dark-900 border-b border-slate-800 relative" id="collaborate">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+<!-- Left: Collaboration Details -->
+<div class="lg:col-span-5 space-y-6">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-500/10 border border-brand-500/20 text-brand-400 text-xs font-mono font-medium">
+            Partnerships &amp; Opportunities
+          </div>
+<h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
+            Work With TechiGuru
+          </h2>
+<p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+            We partner with passionate creators, innovative tech companies, and educational initiatives to produce meaningful content that empowers the software community.
+          </p>
+<div class="space-y-4 pt-2">
+<h4 class="text-xs font-mono uppercase tracking-wider text-slate-400">Collaboration Scope</h4>
+<ul class="space-y-3 text-sm text-slate-200">
+<li class="flex items-start gap-3">
+<div class="w-5 h-5 rounded bg-brand-500/20 text-brand-400 flex items-center justify-center shrink-0 mt-0.5">
+<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</div>
+<span><strong>YouTube Collaborations:</strong> Joint videos and knowledge shares.</span>
+</li>
+<li class="flex items-start gap-3">
+<div class="w-5 h-5 rounded bg-brand-500/20 text-brand-400 flex items-center justify-center shrink-0 mt-0.5">
+<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</div>
+<span><strong>Guest Tutorials &amp; Interviews:</strong> Industry expert features.</span>
+</li>
+<li class="flex items-start gap-3">
+<div class="w-5 h-5 rounded bg-brand-500/20 text-brand-400 flex items-center justify-center shrink-0 mt-0.5">
+<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</div>
+<span><strong>Sponsored Educational Content:</strong> High-impact developer tools and libraries.</span>
+</li>
+<li class="flex items-start gap-3">
+<div class="w-5 h-5 rounded bg-brand-500/20 text-brand-400 flex items-center justify-center shrink-0 mt-0.5">
+<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</div>
+<span><strong>Product Reviews:</strong> Transparent dev-hardware and software reviews.</span>
+</li>
+<li class="flex items-start gap-3">
+<div class="w-5 h-5 rounded bg-brand-500/20 text-brand-400 flex items-center justify-center shrink-0 mt-0.5">
+<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</div>
+<span><strong>Brand Partnerships &amp; Projects:</strong> Long-term strategic campaigns.</span>
+</li>
+</ul>
+</div>
+<!-- Trust & Privacy Note -->
+<div class="p-4 rounded-xl bg-dark-950 border border-slate-800 text-xs text-slate-400">
+<span class="text-emerald-400 font-semibold block mb-1">Direct Secure Communication:</span>
+            Submitting this proposal generates a pre-formatted email draft straight into your native email client addressed to <strong class="text-white">techiguru.in@gmail.com</strong>. No account passwords or sensitive permissions required.
+          </div>
+</div>
+<!-- Right: Collaboration Proposal Form -->
+<div class="lg:col-span-7">
+<div class="p-8 rounded-2xl bg-dark-850 border border-slate-700/80 shadow-2xl">
+<h3 class="text-xl font-bold text-white mb-2">Collaboration Request Form</h3>
+<p class="text-xs text-slate-400 mb-6">Fill in the project details below to compose an inquiry email directly to TechiGuru.</p>
+<form class="space-y-5" id="collabForm" onsubmit="handleCollabSubmit(event)">
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+<div>
+<label class="block text-xs font-medium text-slate-300 mb-1.5" for="collabName">Your Full Name <span class="text-red-400">*</span></label>
+<input class="w-full px-4 py-3 bg-dark-900 border border-slate-700 rounded-xl text-base sm:text-sm text-white focus:outline-none focus:border-brand-400 focus:ring-1 focus:ring-brand-400 transition-colors" id="collabName" placeholder="e.g. John Doe" required="" type="text"/>
+</div>
+<div>
+<label class="block text-xs font-medium text-slate-300 mb-1.5" for="collabCompany">Company or Channel Name <span class="text-red-400">*</span></label>
+<input class="w-full px-4 py-3 bg-dark-900 border border-slate-700 rounded-xl text-base sm:text-sm text-white focus:outline-none focus:border-brand-400 focus:ring-1 focus:ring-brand-400 transition-colors" id="collabCompany" placeholder="e.g. Acme Tech / DevChannel" required="" type="text"/>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+<div>
+<label class="block text-xs font-medium text-slate-300 mb-1.5" for="collabEmail">Email Address <span class="text-red-400">*</span></label>
+<input class="w-full px-4 py-3 bg-dark-900 border border-slate-700 rounded-xl text-base sm:text-sm text-white focus:outline-none focus:border-brand-400 focus:ring-1 focus:ring-brand-400 transition-colors" id="collabEmail" placeholder="your.name@company.com" required="" type="email"/>
+</div>
+<div>
+<label class="block text-xs font-medium text-slate-300 mb-1.5" for="collabType">Collaboration Type <span class="text-red-400">*</span></label>
+<select class="w-full px-4 py-3 bg-dark-900 border border-slate-700 rounded-xl text-base sm:text-sm text-white focus:outline-none focus:border-brand-400 focus:ring-1 focus:ring-brand-400 transition-colors" id="collabType" required="">
+<option value="YouTube Collaboration">YouTube Collaboration</option>
+<option value="Guest Tutorial / Interview">Guest Tutorial &amp; Interview</option>
+<option value="Sponsored Educational Content">Sponsored Educational Content</option>
+<option value="Technology Product Review">Technology Product Review</option>
+<option value="Brand Partnership">Brand Partnership</option>
+<option value="Project Collaboration">Project Collaboration</option>
+</select>
+</div>
+</div>
+<div>
+<label class="block text-xs font-medium text-slate-300 mb-1.5" for="collabBudget">Estimated Budget (Optional)</label>
+<input class="w-full px-4 py-3 bg-dark-900 border border-slate-700 rounded-xl text-base sm:text-sm text-white focus:outline-none focus:border-brand-400 focus:ring-1 focus:ring-brand-400 transition-colors" id="collabBudget" placeholder="e.g. $500 - $1,000 / INR 40,000 / Negotiable" type="text"/>
+</div>
+<div>
+<label class="block text-xs font-medium text-slate-300 mb-1.5" for="collabDetails">Project Details &amp; Objectives <span class="text-red-400">*</span></label>
+<textarea class="w-full px-4 py-3 bg-dark-900 border border-slate-700 rounded-xl text-base sm:text-sm text-white focus:outline-none focus:border-brand-400 focus:ring-1 focus:ring-brand-400 transition-colors" id="collabDetails" placeholder="Outline your vision, proposed timelines, links to product or channel..." required="" rows="4"></textarea>
+</div>
+<!-- Action button generating the exact mailto -->
+<div class="pt-2">
+<button class="w-full py-3.5 px-6 rounded-xl bg-brand-600 hover:bg-brand-500 text-white font-semibold text-sm transition-all shadow-lg shadow-brand-600/25 flex items-center justify-center gap-2" type="submit">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+                  Generate &amp; Send Proposal Email
+                </button>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section: Contact Information & General Message Form -->
+<section class="py-24 bg-[#060911] border-b border-slate-800" id="contact">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+<!-- Left: Official Channel Directory & Social Profiles -->
+<div class="lg:col-span-5 space-y-8">
+<div>
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-500/10 border border-brand-500/20 text-brand-400 text-xs font-mono font-medium mb-3">
+              Direct Contact
+            </div>
+<h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
+              Get in Touch
+            </h2>
+<p class="text-slate-400 text-sm sm:text-base mt-2">
+              Have a question about a tutorial, spotted a bug, or want to say hello? Use any official channel below.
+            </p>
+</div>
+<!-- Official Details Cards -->
+<div class="space-y-4">
+<!-- Email -->
+<a class="p-4 rounded-xl bg-dark-900 border border-slate-800 hover:border-brand-500/50 flex items-center gap-4 transition-all group" href="mailto:techiguru.in@gmail.com">
+<div class="w-10 h-10 rounded-lg bg-brand-500/10 text-brand-400 flex items-center justify-center shrink-0 group-hover:bg-brand-500 group-hover:text-white transition-colors">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</div>
+<div>
+<span class="text-xs font-mono text-slate-400 block">Business Email</span>
+<span class="text-sm font-semibold text-white group-hover:text-brand-400 transition-colors">techiguru.in@gmail.com</span>
+</div>
+</a>
+<!-- Official Website -->
+<a class="p-4 rounded-xl bg-dark-900 border border-slate-800 hover:border-brand-500/50 flex items-center gap-4 transition-all group" href="https://techiguru.in" rel="noopener noreferrer" target="_blank">
+<div class="w-10 h-10 rounded-lg bg-brand-500/10 text-brand-400 flex items-center justify-center shrink-0 group-hover:bg-brand-500 group-hover:text-white transition-colors">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</div>
+<div>
+<span class="text-xs font-mono text-slate-400 block">Official Website</span>
+<span class="text-sm font-semibold text-white group-hover:text-brand-400 transition-colors">https://techiguru.in</span>
+</div>
+</a>
+<!-- YouTube -->
+<a class="p-4 rounded-xl bg-dark-900 border border-slate-800 hover:border-red-500/50 flex items-center gap-4 transition-all group" href="https://www.youtube.com/@techiguru-in" rel="noopener noreferrer" target="_blank">
+<div class="w-10 h-10 rounded-lg bg-red-600/10 text-red-400 flex items-center justify-center shrink-0 group-hover:bg-red-600 group-hover:text-white transition-colors">
+<svg class="w-5 h-5 fill-current" viewbox="0 0 24 24">
+<path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.498-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"></path>
+</svg>
+</div>
+<div>
+<span class="text-xs font-mono text-slate-400 block">YouTube Channel</span>
+<span class="text-sm font-semibold text-white group-hover:text-red-400 transition-colors">youtube.com/@techiguru-in</span>
+</div>
+</a>
+<!-- Instagram -->
+<a class="p-4 rounded-xl bg-dark-900 border border-slate-800 hover:border-pink-500/50 flex items-center gap-4 transition-all group" href="https://instagram.com/techiguru.in" rel="noopener noreferrer" target="_blank">
+<div class="w-10 h-10 rounded-lg bg-pink-500/10 text-pink-400 flex items-center justify-center shrink-0 group-hover:bg-pink-600 group-hover:text-white transition-colors">
+<svg class="w-5 h-5 fill-current" viewbox="0 0 24 24">
+<path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path>
+</svg>
+</div>
+<div>
+<span class="text-xs font-mono text-slate-400 block">Instagram</span>
+<span class="text-sm font-semibold text-white group-hover:text-pink-400 transition-colors">instagram.com/techiguru.in</span>
+</div>
+</a>
+<!-- Facebook -->
+<a class="p-4 rounded-xl bg-dark-900 border border-slate-800 hover:border-blue-600/50 flex items-center gap-4 transition-all group" href="https://facebook.com/pawansharma548" rel="noopener noreferrer" target="_blank">
+<div class="w-10 h-10 rounded-lg bg-blue-600/10 text-blue-400 flex items-center justify-center shrink-0 group-hover:bg-blue-600 group-hover:text-white transition-colors">
+<svg class="w-5 h-5 fill-current" viewbox="0 0 24 24">
+<path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"></path>
+</svg>
+</div>
+<div>
+<span class="text-xs font-mono text-slate-400 block">Facebook Profile</span>
+<span class="text-sm font-semibold text-white group-hover:text-blue-400 transition-colors">facebook.com/pawansharma548</span>
+</div>
+</a>
+</div>
+</div>
+<!-- Right: General Contact Form with Validations -->
+<div class="lg:col-span-7">
+<div class="p-8 rounded-2xl bg-dark-900 border border-slate-800 shadow-xl">
+<h3 class="text-xl font-bold text-white mb-2">Send a Message</h3>
+<p class="text-xs text-slate-400 mb-6">
+              Enter your inquiry below. Submitting will validate fields and open a pre-filled email draft to <strong class="text-slate-300">techiguru.in@gmail.com</strong>.
+            </p>
+<form class="space-y-5" id="contactForm" onsubmit="handleContactSubmit(event)">
+<div>
+<label class="block text-xs font-medium text-slate-300 mb-1.5" for="contactFullName">Full Name <span class="text-red-400">*</span></label>
+<input class="w-full px-4 py-3 bg-dark-800 border border-slate-700 rounded-xl text-base sm:text-sm text-white focus:outline-none focus:border-brand-400 focus:ring-1 focus:ring-brand-400 transition-colors" id="contactFullName" placeholder="Your full name" required="" type="text"/>
+</div>
+<div>
+<label class="block text-xs font-medium text-slate-300 mb-1.5" for="contactEmail">Email Address <span class="text-red-400">*</span></label>
+<input class="w-full px-4 py-3 bg-dark-800 border border-slate-700 rounded-xl text-base sm:text-sm text-white focus:outline-none focus:border-brand-400 focus:ring-1 focus:ring-brand-400 transition-colors" id="contactEmail" placeholder="your.email@example.com" required="" type="email"/>
+</div>
+<div>
+<label class="block text-xs font-medium text-slate-300 mb-1.5" for="contactSubject">Subject <span class="text-red-400">*</span></label>
+<input class="w-full px-4 py-3 bg-dark-800 border border-slate-700 rounded-xl text-base sm:text-sm text-white focus:outline-none focus:border-brand-400 focus:ring-1 focus:ring-brand-400 transition-colors" id="contactSubject" placeholder="Tutorial question / Feedback / General inquiry" required="" type="text"/>
+</div>
+<div>
+<label class="block text-xs font-medium text-slate-300 mb-1.5" for="contactMessage">Message <span class="text-red-400">*</span></label>
+<textarea class="w-full px-4 py-3 bg-dark-800 border border-slate-700 rounded-xl text-base sm:text-sm text-white focus:outline-none focus:border-brand-400 focus:ring-1 focus:ring-brand-400 transition-colors" id="contactMessage" placeholder="Type your message here..." required="" rows="4"></textarea>
+</div>
+<!-- Integration status notification -->
+<div class="hidden p-3 rounded-lg text-xs font-mono" id="contactFormStatus"></div>
+<div>
+<button class="w-full py-3.5 px-6 rounded-xl bg-slate-800 hover:bg-slate-700 text-brand-400 border border-brand-500/30 font-semibold text-sm transition-all flex items-center justify-center gap-2" type="submit">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+                  Submit &amp; Open Mail Client
+                </button>
+</div>
+<div class="text-[11px] text-slate-500 text-center font-mono">
+                No database required for static sites • Guaranteed client delivery fallback
+              </div>
+</form>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Video Player Modal Component -->
+<div class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 sm:p-6 bg-black/85 modal-backdrop" id="videoModal" onclick="handleModalClick(event)">
+<div class="relative w-full max-w-4xl bg-dark-900 border border-slate-700 rounded-2xl overflow-hidden shadow-2xl" onclick="event.stopPropagation()">
+<!-- Modal Header -->
+<div class="flex items-center justify-between px-6 py-4 border-b border-slate-800 bg-dark-850">
+<div class="flex items-center gap-3">
+<div class="w-3 h-3 rounded-full bg-red-500 animate-pulse"></div>
+<h3 class="text-sm sm:text-base font-bold text-white truncate max-w-md sm:max-w-xl" id="modalVideoTitle">Video Player</h3>
+</div>
+<button class="p-1.5 rounded-lg text-slate-400 hover:text-white hover:bg-slate-800 transition-colors" onclick="closeVideoModal()" title="Close Modal">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+</div>
+<!-- Video Container Frame -->
+<div class="relative aspect-video w-full bg-black">
+<iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="" class="w-full h-full" frameborder="0" id="modalIframe" src="" title="YouTube Video Player"></iframe>
+</div>
+<!-- Modal Footer -->
+<div class="p-4 bg-dark-850 border-t border-slate-800 flex items-center justify-between text-xs text-slate-400">
+<span class="font-mono">TechiGuru Official YouTube Streaming</span>
+<a class="text-brand-400 hover:text-brand-300 font-semibold inline-flex items-center gap-1" href="https://www.youtube.com/@techiguru-in" id="modalExternalLink" rel="noopener noreferrer" target="_blank">
+          Open on YouTube →
+        </a>
+</div>
+</div>
+</div>
+<!-- Footer -->
+<footer class="bg-dark-950 border-t border-slate-800 pt-16 pb-12 text-slate-400">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 pb-12 border-b border-slate-800/80">
+<!-- Brand & Tagline -->
+<div class="lg:col-span-4 space-y-4">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-xl bg-gradient-to-tr from-brand-600 to-brand-400 flex items-center justify-center text-white font-bold font-mono text-lg">
+              TG
+            </div>
+<span class="text-xl font-extrabold tracking-tight text-white">TechiGuru</span>
+</div>
+<p class="text-xs font-mono text-brand-400">
+            Master Modern Technology. Build Real-World Skills.
+          </p>
+<p class="text-xs text-slate-400 leading-relaxed max-w-sm">
+            Bridging the gap between learning and real-world software engineering through practical tutorials, hands-on projects, and modern computer science education.
+          </p>
+<div class="text-xs text-slate-400">
+            Location: <span class="text-slate-200">India</span>
+</div>
+</div>
+<!-- Quick Navigation Links -->
+<div class="lg:col-span-3 space-y-3">
+<h4 class="text-xs font-mono uppercase tracking-widest text-slate-300">Quick Navigation</h4>
+<ul class="space-y-2 text-xs">
+<li><a class="hover:text-brand-400 transition-colors" href="#home">Home &amp; Channel Intro</a></li>
+<li><a class="hover:text-brand-400 transition-colors" href="#videos">YouTube Video Catalog</a></li>
+<li><a class="hover:text-brand-400 transition-colors" href="#about">About &amp; Curriculum</a></li>
+<li><a class="hover:text-brand-400 transition-colors" href="#blog">Engineering Blog</a></li>
+<li><a class="hover:text-brand-400 transition-colors" href="#collaborate">Collaborate &amp; Partnerships</a></li>
+<li><a class="hover:text-brand-400 transition-colors" href="#contact">Contact Information</a></li>
+</ul>
+</div>
+<!-- Social Media Links -->
+<div class="lg:col-span-3 space-y-3">
+<h4 class="text-xs font-mono uppercase tracking-widest text-slate-300">Social Connections</h4>
+<ul class="space-y-2 text-xs">
+<li>
+<a class="hover:text-red-400 transition-colors flex items-center gap-2" href="https://www.youtube.com/@techiguru-in" rel="noopener noreferrer" target="_blank">
+<span class="w-1.5 h-1.5 rounded-full bg-red-500"></span>
+                YouTube: @techiguru-in
+              </a>
+</li>
+<li>
+<a class="hover:text-pink-400 transition-colors flex items-center gap-2" href="https://instagram.com/techiguru.in" rel="noopener noreferrer" target="_blank">
+<span class="w-1.5 h-1.5 rounded-full bg-pink-500"></span>
+                Instagram: @techiguru.in
+              </a>
+</li>
+<li>
+<a class="hover:text-blue-400 transition-colors flex items-center gap-2" href="https://facebook.com/pawansharma548" rel="noopener noreferrer" target="_blank">
+<span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span>
+                Facebook: pawansharma548
+              </a>
+</li>
+<li>
+<a class="hover:text-brand-400 transition-colors flex items-center gap-2" href="https://techiguru.in" rel="noopener noreferrer" target="_blank">
+<span class="w-1.5 h-1.5 rounded-full bg-brand-400"></span>
+                Official Site: techiguru.in
+              </a>
+</li>
+</ul>
+</div>
+<!-- Direct Business Contact -->
+<div class="lg:col-span-2 space-y-3">
+<h4 class="text-xs font-mono uppercase tracking-widest text-slate-300">Inquiries</h4>
+<div class="text-xs text-slate-400 leading-relaxed">
+            Direct Email:<br/>
+<a class="text-white hover:text-brand-400 transition-colors font-medium break-all" href="mailto:techiguru.in@gmail.com">techiguru.in@gmail.com</a>
+</div>
+<div class="pt-2">
+<a class="inline-block px-3 py-1.5 rounded bg-red-600 hover:bg-red-700 text-white font-semibold text-[11px] transition-colors" href="https://www.youtube.com/@techiguru-in?sub_confirmation=1" rel="noopener noreferrer" target="_blank">
+              + Subscribe Channel
+            </a>
+</div>
+</div>
+</div>
+<!-- Copyright Notice & Clean Policy Note -->
+<div class="pt-8 flex flex-col sm:flex-row sm:items-center justify-between text-xs text-slate-400 gap-4">
+<div>
+          © <span id="currentYear"></span> TechiGuru (techiguru.in). All rights reserved.
+        </div>
+<div class="flex items-center gap-6 text-[11px]">
+<span>Handcrafted for real-world software learning</span>
+<a class="hover:text-white transition-colors" href="#home">Back to Top ↑</a>
+</div>
+</div>
+</div>
+</footer>
+<!-- Single-File Vanilla JavaScript Logic -->
+<script>
+    /**
+     * TEchiGuru Modern Website Client Application
+     * Author: Senior Full-Stack Engineering Team
+     * Architecture: Vanilla ES6 JavaScript, Zero Heavy Frameworks
+     */
+
+    // 1. Static Initial Video Dataset
+    // (Actual real-world topic mappings ready for YouTube Data API v3 override)
+    const VIDEO_DATABASE = [
+      {
+        id: "vid_01",
+        youtubeId: "vLnPwxZdW4Y",
+        title: "C++ Programming Full Course for Beginners | Complete Roadmap & Projects",
+        category: "Programming",
+        publishedDate: "2024-03-15",
+        duration: "4:12:00",
+        thumbnail: "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?w=600&auto=format&fit=crop&q=80",
+        description: "Master modern C++ from pointers, memory management, and OOP to standard template library (STL)."
+      },
+      {
+        id: "vid_02",
+        youtubeId: "bMknfKXIFA8",
+        title: "React.js & Tailwind CSS Masterclass: Build Production Web Applications",
+        category: "Web Development",
+        publishedDate: "2024-03-02",
+        duration: "2:45:10",
+        thumbnail: "https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=600&auto=format&fit=crop&q=80",
+        description: "Comprehensive step-by-step tutorial on component architecture, state management, and modern responsive UI design."
+      },
+      {
+        id: "vid_03",
+        youtubeId: "7CqJlxBYj-M",
+        title: "Complete Python for Beginners: From Syntax to Real-World Scripts",
+        category: "Programming",
+        publishedDate: "2024-02-18",
+        duration: "3:30:00",
+        thumbnail: "https://images.unsplash.com/photo-1526379095098-d400fd0bf935?w=600&auto=format&fit=crop&q=80",
+        description: "Learn Python fundamentals, data structures, file handling, automation, and basic API consumption."
+      },
+      {
+        id: "vid_04",
+        youtubeId: "3JluqTojuME",
+        title: "Docker & Containerization for Developers Explained with Real Examples",
+        category: "Cloud & DevOps",
+        publishedDate: "2024-02-05",
+        duration: "1:18:40",
+        thumbnail: "https://images.unsplash.com/photo-1607799279861-4dd421887fb3?w=600&auto=format&fit=crop&q=80",
+        description: "Understand Dockerfiles, images, containers, volumes, multi-stage builds, and Docker Compose."
+      },
+      {
+        id: "vid_05",
+        youtubeId: "8hly31xKli0",
+        title: "Data Structures & Algorithms in Depth: Master Problem Solving for Interviews",
+        category: "Core CS",
+        publishedDate: "2024-01-20",
+        duration: "5:20:00",
+        thumbnail: "https://images.unsplash.com/photo-1509228468518-180dd4864904?w=600&auto=format&fit=crop&q=80",
+        description: "Solve fundamental LeetCode patterns including Two Pointers, Sliding Window, Trees, and Dynamic Programming."
+      },
+      {
+        id: "vid_06",
+        youtubeId: "Oe421EPjeBE",
+        title: "Full-Stack Node.js, Express & MongoDB (MERN) REST API Architecture",
+        category: "Web Development",
+        publishedDate: "2024-01-08",
+        duration: "2:55:00",
+        thumbnail: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=600&auto=format&fit=crop&q=80",
+        description: "Architect secure, scalable backends with JWT authentication, MongoDB schemas, and error handling middleware."
+      },
+      {
+        id: "vid_07",
+        youtubeId: "aircAruvnKk",
+        title: "Artificial Intelligence & Machine Learning: Foundations & Roadmap",
+        category: "AI & Data",
+        publishedDate: "2023-12-14",
+        duration: "2:10:00",
+        thumbnail: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=600&auto=format&fit=crop&q=80",
+        description: "Demystifying linear algebra, neural networks, supervised learning models, and Python data libraries."
+      },
+      {
+        id: "vid_08",
+        youtubeId: "grEKMHGYyns",
+        title: "AWS Cloud Fundamentals: Deploying Your First Full-Stack Application",
+        category: "Cloud & DevOps",
+        publishedDate: "2023-11-28",
+        duration: "1:45:00",
+        thumbnail: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=600&auto=format&fit=crop&q=80",
+        description: "Hands-on walk through EC2, S3, RDS database setup, security groups, and automated deployment scripts."
+      },
+      {
+        id: "vid_09",
+        youtubeId: "xk4_1vDrzzo",
+        title: "Java Full Course: Object Oriented Programming & Backend Foundations",
+        category: "Programming",
+        publishedDate: "2023-11-05",
+        duration: "4:05:00",
+        thumbnail: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=600&auto=format&fit=crop&q=80",
+        description: "Solidify core Java, JVM internals, Collections Framework, multithreading, and Spring Boot basics."
+      }
+    ];
+
+    // 2. Initial Blog Articles Dataset
+    const BLOG_POSTS = [
+      {
+        id: "post_01",
+        title: "The 2025 Full-Stack Engineer Roadmap: What Actually Matters",
+        category: "Web Development",
+        date: "March 2024",
+        summary: "Navigating frameworks, TypeScript, database selection, and Docker in an era where AI tooling is accelerating developer workflows.",
+        readTime: "7 min read",
+        slug: "full-stack-roadmap-2025"
+      },
+      {
+        id: "post_02",
+        title: "Demystifying Docker: Why Containers Are Non-Negotiable in Production",
+        category: "Cloud & DevOps",
+        date: "February 2024",
+        summary: "Understand container virtualization vs traditional VMs and how to create lean 30MB production images with multi-stage builds.",
+        readTime: "5 min read",
+        slug: "demystifying-docker-production"
+      },
+      {
+        id: "post_03",
+        title: "Clean Code in Python: 10 Patterns Senior Developers Swear By",
+        category: "Programming",
+        date: "January 2024",
+        summary: "From type hinting and dataclasses to generator pipelines and contextual managers for robust script maintainability.",
+        readTime: "6 min read",
+        slug: "clean-code-python-patterns"
+      }
+    ];
+
+    // Video Filter & Pagination State
+    let currentLimit = 6;
+    let filteredVideos = [...VIDEO_DATABASE];
+
+    // Initialization on DOM Load
+    document.addEventListener("DOMContentLoaded", () => {
+      // Set Copyright Year
+      const yearEl = document.getElementById("currentYear");
+      if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+      // Setup Navigation Listeners
+      setupMobileNavigation();
+
+      // Render Video Grid
+      renderVideos();
+
+      // Setup Video Event Listeners
+      const searchInput = document.getElementById("videoSearchInput");
+      const categorySelect = document.getElementById("videoCategorySelect");
+      const sortSelect = document.getElementById("videoSortSelect");
+      const loadMoreBtn = document.getElementById("loadMoreBtn");
+      const resetBtn = document.getElementById("resetVideoFilterBtn");
+      const apiGuideToggle = document.getElementById("apiGuideToggleBtn");
+
+      if (searchInput) searchInput.addEventListener("input", applyVideoFilters);
+      if (categorySelect) categorySelect.addEventListener("change", applyVideoFilters);
+      if (sortSelect) sortSelect.addEventListener("change", applyVideoFilters);
+      
+      if (loadMoreBtn) {
+        loadMoreBtn.addEventListener("click", () => {
+          currentLimit += 3;
+          renderVideos();
+        });
+      }
+
+      if (resetBtn) {
+        resetBtn.addEventListener("click", () => {
+          if (searchInput) searchInput.value = "";
+          if (categorySelect) categorySelect.value = "ALL";
+          if (sortSelect) sortSelect.value = "NEWEST";
+          applyVideoFilters();
+        });
+      }
+
+      if (apiGuideToggle) {
+        apiGuideToggle.addEventListener("click", () => {
+          const guide = document.getElementById("apiGuideBox");
+          if (guide) guide.classList.toggle("hidden");
+        });
+      }
+
+      // Render Blogs
+      renderBlogPosts();
+    });
+
+    // Mobile Hamburger Menu Management
+    function setupMobileNavigation() {
+      const menuBtn = document.getElementById("mobileMenuBtn");
+      const mobileMenu = document.getElementById("mobileMenu");
+      const iconClosed = document.getElementById("menuIconClosed");
+      const iconOpened = document.getElementById("menuIconOpened");
+      const navLinks = document.querySelectorAll(".mobile-nav-link");
+
+      if (!menuBtn || !mobileMenu) return;
+
+      menuBtn.addEventListener("click", () => {
+        const isHidden = mobileMenu.classList.contains("hidden");
+        if (isHidden) {
+          mobileMenu.classList.remove("hidden");
+          iconClosed.classList.add("hidden");
+          iconOpened.classList.remove("hidden");
+        } else {
+          mobileMenu.classList.add("hidden");
+          iconClosed.classList.remove("hidden");
+          iconOpened.classList.add("hidden");
+        }
+      });
+
+      // Close menu when clicking link
+      navLinks.forEach(link => {
+        link.addEventListener("click", () => {
+          mobileMenu.classList.add("hidden");
+          iconClosed.classList.remove("hidden");
+          iconOpened.classList.add("hidden");
+        });
+      });
+    }
+
+    // Filter & Sort Video Catalog
+    function applyVideoFilters() {
+      const searchTerm = (document.getElementById("videoSearchInput")?.value || "").toLowerCase().trim();
+      const selectedCategory = document.getElementById("videoCategorySelect")?.value || "ALL";
+      const selectedSort = document.getElementById("videoSortSelect")?.value || "NEWEST";
+
+      filteredVideos = VIDEO_DATABASE.filter(video => {
+        const matchesCategory = (selectedCategory === "ALL" || video.category === selectedCategory);
+        const matchesSearch = !searchTerm || 
+          video.title.toLowerCase().includes(searchTerm) || 
+          video.description.toLowerCase().includes(searchTerm) ||
+          video.category.toLowerCase().includes(searchTerm);
+        return matchesCategory && matchesSearch;
+      });
+
+      // Sorting
+      if (selectedSort === "NEWEST") {
+        filteredVideos.sort((a, b) => new Date(b.publishedDate) - new Date(a.publishedDate));
+      } else if (selectedSort === "OLDEST") {
+        filteredVideos.sort((a, b) => new Date(a.publishedDate) - new Date(b.publishedDate));
+      } else if (selectedSort === "TITLE") {
+        filteredVideos.sort((a, b) => a.title.localeCompare(b.title));
+      }
+
+      currentLimit = 6;
+      renderVideos();
+    }
+
+    // Render Videos into HTML Grid
+    function renderVideos() {
+      const grid = document.getElementById("videoGrid");
+      const emptyState = document.getElementById("videoEmptyState");
+      const loadMoreSection = document.getElementById("loadMoreSection");
+
+      if (!grid) return;
+      grid.innerHTML = "";
+
+      if (filteredVideos.length === 0) {
+        grid.classList.add("hidden");
+        emptyState.classList.remove("hidden");
+        loadMoreSection.classList.add("hidden");
+        return;
+      }
+
+      grid.classList.remove("hidden");
+      emptyState.classList.add("hidden");
+
+      const visibleList = filteredVideos.slice(0, currentLimit);
+
+      visibleList.forEach(vid => {
+        const card = document.createElement("div");
+        card.className = "rounded-2xl bg-dark-900 border border-slate-800 hover:border-brand-500/50 transition-all duration-300 overflow-hidden flex flex-col group";
+
+        card.innerHTML = `
+          <!-- Thumbnail Area -->
+          <div class="relative aspect-video bg-slate-950 overflow-hidden cursor-pointer" onclick="openVideoModal('${vid.youtubeId}', '${escapeHtml(vid.title)}')">
+            <img src="${vid.thumbnail}" alt="${escapeHtml(vid.title)}" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-90 group-hover:opacity-100">
+            
+            <div class="absolute inset-0 bg-gradient-to-t from-dark-950/80 via-transparent to-transparent flex items-center justify-center opacity-90 group-hover:opacity-100 transition-opacity">
+              <div class="w-12 h-12 rounded-full bg-red-600/90 text-white flex items-center justify-center shadow-lg group-hover:scale-110 group-hover:bg-red-600 transition-transform">
+                <svg class="w-5 h-5 fill-current ml-0.5" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+              </div>
+            </div>
+
+            <div class="absolute bottom-2.5 right-2.5 px-2 py-0.5 rounded bg-black/85 text-[10px] font-mono text-slate-200">
+              ${vid.duration}
+            </div>
+            <div class="absolute top-2.5 left-2.5 px-2.5 py-0.5 rounded-full bg-dark-900/90 border border-slate-700/80 text-[10px] font-mono text-brand-400">
+              ${vid.category}
+            </div>
+          </div>
+
+          <!-- Video Body -->
+          <div class="p-5 flex flex-col flex-grow justify-between space-y-4">
+            <div>
+              <div class="text-[11px] font-mono text-slate-400 mb-1.5 flex items-center justify-between">
+                <span>Published: ${vid.publishedDate}</span>
+                <span class="text-emerald-400 flex items-center gap-1">
+                  <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span> HD Available
+                </span>
+              </div>
+              <h3 class="text-sm font-bold text-white line-clamp-2 leading-snug group-hover:text-brand-300 transition-colors">
+                ${escapeHtml(vid.title)}
+              </h3>
+              <p class="text-xs text-slate-400 mt-2 line-clamp-2 leading-relaxed">
+                ${escapeHtml(vid.description)}
+              </p>
+            </div>
+
+            <!-- Card Actions -->
+            <div class="pt-3 border-t border-slate-800/80 flex items-center justify-between text-xs">
+              <button onclick="openVideoModal('${vid.youtubeId}', '${escapeHtml(vid.title)}')" class="text-white hover:text-brand-400 font-semibold flex items-center gap-1.5">
+                <svg class="w-4 h-4 fill-current text-brand-400" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                Watch Here
+              </button>
+
+              <a href="https://www.youtube.com/watch?v=${vid.youtubeId}" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-white flex items-center gap-1 transition-colors">
+                YouTube Link
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+              </a>
+            </div>
+          </div>
+        `;
+
+        grid.appendChild(card);
+      });
+
+      // Show/Hide Load More Button
+      if (currentLimit >= filteredVideos.length) {
+        loadMoreSection.classList.add("hidden");
+      } else {
+        loadMoreSection.classList.remove("hidden");
+      }
+    }
+
+    // Render Blog Articles
+    function renderBlogPosts() {
+      const blogGrid = document.getElementById("blogGrid");
+      if (!blogGrid) return;
+      blogGrid.innerHTML = "";
+
+      BLOG_POSTS.forEach(post => {
+        const item = document.createElement("article");
+        item.className = "p-6 rounded-2xl bg-dark-900 border border-slate-800 hover:border-slate-700 transition-all flex flex-col justify-between group";
+
+        item.innerHTML = `
+          <div>
+            <div class="flex items-center justify-between text-xs font-mono text-slate-400 mb-3">
+              <span class="text-brand-400 px-2.5 py-0.5 rounded bg-brand-500/10 border border-brand-500/20">${post.category}</span>
+              <span>${post.date} • ${post.readTime}</span>
+            </div>
+            <h3 class="text-lg font-bold text-white group-hover:text-brand-300 transition-colors mb-2 leading-snug">
+              ${post.title}
+            </h3>
+            <p class="text-xs text-slate-400 leading-relaxed mb-6">
+              ${post.summary}
+            </p>
+          </div>
+
+          <div class="pt-4 border-t border-slate-800/80 flex items-center justify-between text-xs">
+            <span class="font-mono text-slate-400">By TechiGuru Lead</span>
+            <button onclick="readArticleModal('${post.slug}', '${escapeHtml(post.title)}')" class="text-brand-400 hover:text-brand-300 font-semibold inline-flex items-center gap-1 group-hover:translate-x-0.5 transition-transform">
+              Read Article &rarr;
+            </button>
+          </div>
+        `;
+        blogGrid.appendChild(item);
+      });
+    }
+
+    // Modal Video Player Handling
+    function openVideoModal(youtubeId, title) {
+      const modal = document.getElementById("videoModal");
+      const iframe = document.getElementById("modalIframe");
+      const titleEl = document.getElementById("modalVideoTitle");
+      const externalLink = document.getElementById("modalExternalLink");
+
+      if (!modal || !iframe) return;
+
+      titleEl.textContent = title || "TechiGuru Video";
+      iframe.src = `https://www.youtube-nocookie.com/embed/${youtubeId}?autoplay=1&rel=0`;
+      externalLink.href = `https://www.youtube.com/watch?v=${youtubeId}`;
+
+      modal.classList.remove("hidden");
+      document.body.style.overflow = "hidden"; // Prevent page scrolling
+    }
+
+    function closeVideoModal() {
+      const modal = document.getElementById("videoModal");
+      const iframe = document.getElementById("modalIframe");
+
+      if (!modal || !iframe) return;
+
+      iframe.src = ""; // Stop video playback
+      modal.classList.add("hidden");
+      document.body.style.overflow = ""; // Re-enable page scrolling
+    }
+
+    function handleModalClick(event) {
+      if (event.target.id === "videoModal") {
+        closeVideoModal();
+      }
+    }
+
+    // Blog Article Reader Notification
+    function readArticleModal(slug, title) {
+      alert(`[TechiGuru Article Reader]\n\nTitle: ${title}\n\nThis article is published as part of TechiGuru's static knowledge base. To integrate full markdown rendering, you can attach Markdown files to your GitHub repository and fetch them dynamically into this modal.`);
+    }
+
+    // Collaboration Form Mailto Generator
+    function handleCollabSubmit(e) {
+      e.preventDefault();
+
+      const name = document.getElementById("collabName")?.value.trim();
+      const company = document.getElementById("collabCompany")?.value.trim();
+      const email = document.getElementById("collabEmail")?.value.trim();
+      const type = document.getElementById("collabType")?.value;
+      const budget = document.getElementById("collabBudget")?.value.trim() || "Not specified";
+      const details = document.getElementById("collabDetails")?.value.trim();
+
+      if (!name || !company || !email || !details) {
+        alert("Please complete all required fields (*).");
+        return;
+      }
+
+      const emailSubject = encodeURIComponent(`[Work With TechiGuru] Collaboration Proposal: ${type} - ${company}`);
+      const emailBody = encodeURIComponent(
+        `Hello TechiGuru Team,\n\n` +
+        `I would like to discuss a collaboration with your channel.\n\n` +
+        `--- PROPOSAL SUMMARY ---\n` +
+        `Contact Name: ${name}\n` +
+        `Company / Channel: ${company}\n` +
+        `Contact Email: ${email}\n` +
+        `Collaboration Type: ${type}\n` +
+        `Estimated Budget: ${budget}\n\n` +
+        `--- PROJECT DETAILS ---\n` +
+        `${details}\n\n` +
+        `Looking forward to hearing from you!\n\n` +
+        `Best regards,\n${name} (${company})`
+      );
+
+      const targetUrl = `mailto:techiguru.in@gmail.com?subject=${emailSubject}&body=${emailBody}`;
+      
+      // Open native email draft
+      window.location.href = targetUrl;
+    }
+
+    // Contact Form Mailto Generator
+    function handleContactSubmit(e) {
+      e.preventDefault();
+
+      const fullName = document.getElementById("contactFullName")?.value.trim();
+      const email = document.getElementById("contactEmail")?.value.trim();
+      const subject = document.getElementById("contactSubject")?.value.trim();
+      const message = document.getElementById("contactMessage")?.value.trim();
+      const statusBox = document.getElementById("contactFormStatus");
+
+      if (!fullName || !email || !subject || !message) {
+        alert("Please fill out all required contact fields.");
+        return;
+      }
+
+      const emailSubject = encodeURIComponent(`[TechiGuru Inquiry] ${subject} - from ${fullName}`);
+      const emailBody = encodeURIComponent(
+        `Hello TechiGuru,\n\n` +
+        `Sender: ${fullName}\n` +
+        `Email: ${email}\n\n` +
+        `Message:\n${message}\n\n` +
+        `Sent via TechiGuru Official Website (techiguru.in)`
+      );
+
+      if (statusBox) {
+        statusBox.className = "p-3 rounded-lg text-xs font-mono bg-brand-500/10 text-brand-300 border border-brand-500/30";
+        statusBox.textContent = "Opening your email client to dispatch message to techiguru.in@gmail.com...";
+        statusBox.classList.remove("hidden");
+      }
+
+      setTimeout(() => {
+        window.location.href = `mailto:techiguru.in@gmail.com?subject=${emailSubject}&body=${emailBody}`;
+      }, 400);
+    }
+
+    // Utility: HTML Escaper for XSS prevention
+    function escapeHtml(string) {
+      const div = document.createElement("div");
+      div.innerText = string;
+      return div.innerHTML;
+    }
+
+    // Close modal on Escape key
+    window.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") {
+        closeVideoModal();
+      }
+    });
+  </script>
+</body>
+</html>
